@@ -1,0 +1,185 @@
+/* desktop nav bar */
+.MainNavBar{
+    width:100%;
+    display:flex;
+    justify-content: center;
+}
+.navBar,.mobileNavBar{
+    width:100%;
+    max-width: 2000px;
+    height: 60px;
+    background: #D52627;
+    padding: 0px 15px;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.navBar img{
+    height: 50px;
+}
+.navBar ul{
+    width:50%;
+    height: 100%;
+    display:flex;
+    align-items: center;
+    gap:50px;
+    justify-content: center;
+}
+.navBar ul li{
+    list-style: none;
+    cursor: pointer;
+
+}
+.navBar ul li a{
+    text-decoration: none;
+    cursor: pointer;
+    position: relative;
+    font-family: 'Roboto Condensed', sans-serif !important;
+    font-size: 18px;
+    font-weight: 700;
+    color:#ffffff
+}
+.navBar ul li a:after{
+   content: " ";
+   position: absolute;
+   top:110%;
+   left:0px;
+   width:0%;
+   height: 3px;
+   background-color: rgb(245, 170, 170);
+   transition:width 0.3s linear;
+   -webkit-transition:width 0.3s linear;
+   -moz-transition:width 0.3s linear;
+   -ms-transition:width 0.3s linear;
+   -o-transition:width 0.3s linear;
+   border-radius: 3px 3px 3px 3px;
+   -webkit-border-radius: 3px 3px 3px 3px;
+   -moz-border-radius: 3px 3px 3px 3px;
+   -ms-border-radius: 3px 3px 3px 3px;
+   -o-border-radius: 3px 3px 3px 3px;
+}
+.navBar ul li a:hover::after {
+    width:100%;
+}
+/*  */
+/* mobile menu */
+.mobileNavBar{
+position: relative;
+max-width: 2000px;
+}
+.hamMenu{
+    width:50px;
+    height: 50px;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-around;
+    cursor: pointer;
+align-items: center;}
+.line{
+      width:80%;
+      height: 3px;
+      background-color: white;
+      border-radius:3px ;
+      -webkit-border-radius:3px ;
+      -moz-border-radius:3px ;
+      -ms-border-radius:3px ;
+      -o-border-radius:3px ;
+      transition: transform 0.2s linear;
+      -webkit-transition: transform 0.2s linear;
+      -moz-transition: transform 0.2s linear;
+      -ms-transition: transform 0.2s linear;
+      -o-transition: transform 0.2s linear;
+}
+.active.hamMenu .line:nth-of-type(1) {
+    transform: translateY(12px) rotate(45deg);
+    -webkit-transform: translateY(12px) rotate(45deg);
+    -moz-transform: translateY(12px) rotate(45deg);
+    -ms-transform: translateY(12px) rotate(45deg);
+    -o-transform: translateY(12px) rotate(45deg);
+}
+
+.active.hamMenu .line:nth-of-type(2) {
+    transform: translateY(-12px) rotate(-45deg);
+    -webkit-transform: translateY(-12px) rotate(-45deg);
+    -moz-transform: translateY(-12px) rotate(-45deg);
+    -ms-transform: translateY(-12px) rotate(-45deg);
+    -o-transform: translateY(-12px) rotate(-45deg);
+}
+
+.mobileOverLay{
+    background-color: rgba(0, 0, 0, 0.571);
+    position: fixed;
+    top:0px;
+    left:100%;
+    width:100%;
+    height: 100dvh;
+    transition: left 0.2s linear;
+    -webkit-transition: left 0.2s linear;
+    -moz-transition: left 0.2s linear;
+    -ms-transition: left 0.2s linear;
+    -o-transition: left 0.2s linear;
+    display: flex;
+    justify-content: flex-end;
+}
+.show{
+    left:0%;
+}
+.sideMenu{
+    width:300px;
+    height: 100%;
+    top:0px;
+    right:0px;
+    background-color: #D52627;
+}
+.sideMenu ul{
+    height: 60%;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    gap:50px;
+    justify-content: center;
+}
+.sideMenu ul li{
+    list-style: none;
+    cursor: pointer;
+}
+.sideMenu ul li a{
+    text-decoration: none;
+    cursor: pointer;
+    position: relative;
+    font-family: 'Roboto Condensed', sans-serif !important;
+    font-size: 18px;
+    font-weight: 700;
+    color:#ffffff
+}
+.backDiv{
+    display:flex;
+    padding: 30px 0px;
+    align-self: center;
+    font-family: 'Roboto Condensed', sans-serif !important;
+    font-size: 18px;
+    font-weight: 500;
+    color:#ffffff;
+    cursor: pointer;
+gap:10px}
+.backIcon{
+font-family: 30px;
+}
+/*  */
+
+
+
+@media screen and (max-width: 850px) {
+    .navBar ul{
+        width:70%; 
+    }
+    .navBar ul li a{
+        font-size: 13px;   
+    }
+}
+@media screen and (max-width: 400px) {
+    .sideMenu{
+        width:230px 
+    }
+   
+}

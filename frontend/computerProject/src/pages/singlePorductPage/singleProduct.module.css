@@ -1,0 +1,42 @@
+.singleMainProductWrapper{
+    background-color: yellow;
+    width:100%;
+    height: 100dvh;
+    display:flex;
+    justify-content: center;
+}
+.singleProductWrapper{
+    background-color: rgb(255, 21, 0);
+    width:100%;
+    height: 100%; 
+    max-width: 2000px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+.singleProductContainer{
+    width:80%;
+    height:70% ;
+    background-color: blueviolet;
+    display:flex
+}
+.singleProductRightSection{
+    width:40%;
+    height:100% ;
+}
+.singleProductRightSection img{
+    width:100%;
+    height:60% ;
+}
+.singleProductImgsSection{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    gap:10px;
+    background-color: orange;
+
+}
+.singleProductImgsSection img{
+    width:50px;
+    height: 50px;
+}
