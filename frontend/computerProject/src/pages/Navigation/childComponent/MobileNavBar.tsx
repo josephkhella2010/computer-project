@@ -29,7 +29,7 @@ export default function MobileNavBar() {
             </div>
             <ul>
               <li onClick={() => setShowMenu(false)}>
-                <Link to="/">About us</Link>
+                <Link to="/aboutUs">About us</Link>
               </li>
               <li onClick={() => setShowMenu(false)}>
                 <Link to="/product">Our Products</Link>

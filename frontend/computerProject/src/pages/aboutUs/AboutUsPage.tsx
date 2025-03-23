@@ -1,0 +1,15 @@
+import React from "react";
+import styles from "./aboutUs.module.css";
+import AboutUsImgContainer from "./childComponent/AboutUsImgContainer";
+import AboutUsActiveSectionPage from "./childComponent/AboutUsActiveSection";
+
+export default function AboutUsPage() {
+  return (
+    <div className={styles.aboutUsPageWrapper}>
+      <div className={styles.aboutUsPageMainContainer}>
+        <AboutUsImgContainer />
+        <AboutUsActiveSectionPage />
+      </div>
+    </div>
+  );
+}

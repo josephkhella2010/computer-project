@@ -11,12 +11,13 @@
     max-width: 2000px;
 }
 .HomePageUpperSection{
-    background-color:yellow;
+    background-color:#d9b9b9;
     display:flex;
     flex-direction: column;
     align-items: center;
     gap:20px;
     padding: 70px 20px;
+    color: rgb(14 27 77 / 75%)
 }
 .HomePageUpperSection h1{
     display:flex;

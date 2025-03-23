@@ -11,7 +11,7 @@ export default function DesktopNavigation() {
         </Link>
         <ul>
           <li>
-            <Link to="/">About us</Link>
+            <Link to="/aboutUs">About us</Link>
           </li>
           <li>
             <Link to="/product">Our Products</Link>

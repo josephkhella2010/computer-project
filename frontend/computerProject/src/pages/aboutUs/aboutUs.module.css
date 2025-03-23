@@ -1,0 +1,148 @@
+.aboutUsPageWrapper{
+    width:100%;
+    min-height: 100dvh;
+    display:flex;
+    justify-content: center;
+}
+.aboutUsPageMainContainer{
+    width:100%;
+    min-height: 100dvh;
+    max-width: 2000px;
+    background-color: #ff671d;
+    padding-bottom:100px ;
+
+
+}
+.aboutUsUpperContainer{
+
+}
+.aboutUsImgContainer{
+    width:100%;
+    height: 300px;
+}
+.aboutUsImgContainer img{
+    width:100%;
+    height: 100%;
+}
+.aboutUsUpperContainer h1{
+color:white;
+font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+text-align: center;
+
+}
+.aboutUsUpperContainerHeader{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 50px 10px;
+    border-bottom: 1px solid white;
+    
+
+}
+.aboutUsMiddleSection{
+    display:grid;
+    grid-template-columns: repeat(2,1fr);
+    gap:100px;
+    padding:70px 20px;
+    border-bottom: 1px solid white;
+
+}
+.aboutUsMiddleSectionText{
+    width:100%;
+    display:flex;
+    flex-direction: column;
+    gap:20px;
+}.aboutUsMiddleSectionText h1{
+    color:#1e293b;
+}
+.aboutUsMiddleSectionText p{
+    color:white;
+    text-align: center;
+}
+.aboutUsMiddleSectionImg{
+    width:100%  ;
+    height: 100%;
+    display:flex;
+    align-items: center;
+}
+.aboutUsMiddleSectionImg img{
+    width:100% ;
+    height: 60%; 
+}
+.aboutUsActivityContainer{
+    padding: 70px 20px;
+    border-bottom: 1px solid white;
+
+
+}
+.aboutUsActivityContainer h1{
+font-weight: bold;
+color:#1e293b;
+display:flex;
+justify-content: center;
+align-items: center;
+margin-bottom: 70px;
+}
+.aboutUsActivitySection{
+    display:grid;
+    grid-template-columns: repeat(4,1fr);
+    gap:30px
+}
+.aboutUsActivityContent{
+    width:100%;
+    display:flex;
+    flex-direction: column;
+    gap:10px
+}
+.aboutUsActivityContent h4{
+   color:#1e293b;
+}
+.aboutUsActivityContent p{
+    color:white;
+ }
+.aboutUsActivityContent img{
+    width:100%;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+/*  */
+
+
+@media screen and (max-width: 750px) {
+    .aboutUsMiddleSection{
+        gap:50px;
+    }
+    .aboutUsActivitySection{
+        grid-template-columns: repeat(2,1fr);
+       
+    }
+   
+}
+@media screen and (max-width: 600px) {
+    .aboutUsMiddleSection{
+        grid-template-columns: repeat(1,1fr);
+    }
+    .aboutUsMiddleSectionImg{
+        width:100%  ;
+        height: 300px;
+        justify-content: flex-start;
+    }
+    .aboutUsMiddleSectionImg img{
+        height: 100%;
+    }
+    .aboutUsActivitySection{
+        grid-template-columns: repeat(1,1fr);
+       
+    }
+    .aboutUsActivityContent{
+        width:90%;
+        justify-self: center;
+
+    }
+   
+   
+}
