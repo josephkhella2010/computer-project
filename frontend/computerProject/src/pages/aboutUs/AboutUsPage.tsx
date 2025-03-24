@@ -2,6 +2,7 @@ import React from "react";
 import styles from "./aboutUs.module.css";
 import AboutUsImgContainer from "./childComponent/AboutUsImgContainer";
 import AboutUsActiveSectionPage from "./childComponent/AboutUsActiveSection";
+import AboutUsContact from "./childComponent/AboutUsContact";
 
 export default function AboutUsPage() {
   return (
@@ -9,6 +10,7 @@ export default function AboutUsPage() {
       <div className={styles.aboutUsPageMainContainer}>
         <AboutUsImgContainer />
         <AboutUsActiveSectionPage />
+        <AboutUsContact />
       </div>
     </div>
   );
