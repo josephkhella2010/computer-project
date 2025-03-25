@@ -9,6 +9,7 @@ import {
   fetchRequest
 } from "../../../sliceReducers/getComputerDataSlice";
 import { RootState } from "@reduxjs/toolkit/query";
+import { CiSearch } from "react-icons/ci";
 
 export interface productsType {
   id: number;
@@ -20,13 +21,11 @@ export interface productsType {
 }
 export default function Products() {
   const [products, setProducts] = useState<productsType[]>([]);
+  const [searchVal, setSearchVal] = useState<string>("");
   const dispatch = useDispatch();
 
-  /*  const { computerData, loading, error } = useSelector(
-    (state: RootState) => state.computerData
-  ); */
   const productsData = useSelector(
-    (state: RootState) => state.computerData.computerData
+    (state: RootState) => state.computerData.computerData || []
   );
   useEffect(() => {
     dispatch(fetchRequest());
@@ -35,11 +34,32 @@ export default function Products() {
   useEffect(() => {
     setProducts(productsData); // Update local state when computerData changes
   }, [productsData]);
+  function handleSearch(e: React.ChangeEvent<HTMLInputElement>) {
+    const newVal = e.target.value;
+    setSearchVal(newVal);
+
+    // Ensure productsData is an array before filtering
+    const filteredProduct = productsData.filter(
+      (item: productsType) =>
+        item.name.toLowerCase().includes(newVal.toLowerCase()) // Case-insensitive search
+    );
+    console.log(filteredProduct);
+    setProducts(filteredProduct);
+  }
 
   return (
     <div className={styles.productMainContainer}>
-      <h1>productsitem</h1>
-
+      <div className={styles.filterSection}>
+        <div className={styles.searchBar}>
+          <input
+            type="text"
+            placeholder="search"
+            value={searchVal}
+            onChange={(e) => handleSearch(e)}
+          />
+          <CiSearch />
+        </div>
+      </div>
       <div className={styles.ProductContainer}>
         {products &&
           products.map((item, index) => {
