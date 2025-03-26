@@ -125,6 +125,39 @@ background-color: transparent;
 outline: none;
 
 }
+.dropDownContainer{
+    width:200px;
+    height: 30px;
+    margin:30px;
+    background-color:white;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    padding: 20px;
+    position: relative;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+}
+.dropDownMenu{
+    position: absolute;
+    top:103%;
+    left:0%;
+    width:100%;
+    background-color: white;
+    border-radius: 5px;
+    padding: 10px 0px;
+}
+.dropDownMenu p{
+   padding: 10px 0px;  
+   margin:0px 20px
+}
+.dropDownMenu p:nth-of-type(1){
+    border-bottom: 1px solid black;
+ }
 /*  */
 @media screen and (max-width: 950px) {
     .productMainContainer{
