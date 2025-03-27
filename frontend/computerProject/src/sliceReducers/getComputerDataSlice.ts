@@ -49,6 +49,7 @@ export interface productsType {
     name: string;
     description: string; // Ensure this matches your JSON
     price: string;
+    discount:string;
     imgs:string[]
 }
 

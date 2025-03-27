@@ -20,11 +20,11 @@ export default function ProductItems({ item, index }: Props) {
   } */
 
   const { id, url, name, description, price } = item;
-  const placeholderImg = "https://picsum.photos/seed/picsum/200/300";
+  //const placeholderImg = "https://picsum.photos/seed/picsum/200/300";
   return (
     <div className={styles.productItemContent}>
       <div className={styles.productImgContent}>
-        <img src={placeholderImg} alt={name}></img>
+        <img src={url} alt={name}></img>
       </div>
       <div className={styles.productTextContent}>
         <h5>{name}</h5>

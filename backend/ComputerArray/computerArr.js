@@ -1,146 +1,170 @@
 const computerArr = [
   {
     id: 1,
-    url: "",
+    url: "/Foto/productFoto/productOne1.jpg",
     name: "Dell1",
-    description: "lorem1",
+    description:
+      "Paket med 5 stycken Menalux 1800 dammsugarpåsar och ett filter till Electrolux, Philips, Volta och AEG. Upp till 50% längre livslängd än andra kompatibla dammsugarpåsar samt med Duraflow-teknologi som motverkar dålig lukt!",
     price: "1000",
+    discount: "15",
     imgs: [
-      "https://picsum.photos/seed/picsum/200/300",
-      "https://picsum.photos/seed/picsum/200/300",
-      "https://picsum.photos/seed/picsum/200/300"
+      "/Foto/productFoto/productOne1.jpg",
+      "/Foto/productFoto/productOne2.jpg",
+      "/Foto/productFoto/productOne3.jpg"
     ]
   },
   {
     id: 2,
-    url: "",
+    url: "/Foto/productFoto/productOne1.jpg",
     name: "Dell2",
-    description: "lorem2",
+    description:
+      "Paket med 5 stycken Menalux 1800 dammsugarpåsar och ett filter till Electrolux, Philips, Volta och AEG. Upp till 50% längre livslängd än andra kompatibla dammsugarpåsar samt med Duraflow-teknologi som motverkar dålig lukt!",
+    discount: "30",
     price: "2000",
     imgs: [
-      "https://picsum.photos/seed/picsum/200/300",
-      "https://picsum.photos/seed/picsum/200/300",
-      "https://picsum.photos/seed/picsum/200/300"
+      "/Foto/productFoto/productOne1.jpg",
+      "/Foto/productFoto/productOne2.jpg",
+      "/Foto/productFoto/productOne3.jpg"
     ]
   },
   {
     id: 3,
-    url: "",
+    url: "/Foto/productFoto/productOne1.jpg",
     name: "Dell3",
-    description: "lorem3",
+    description:
+      "Paket med 5 stycken Menalux 1800 dammsugarpåsar och ett filter till Electrolux, Philips, Volta och AEG. Upp till 50% längre livslängd än andra kompatibla dammsugarpåsar samt med Duraflow-teknologi som motverkar dålig lukt!",
+    discount: "5",
     price: "3000",
     imgs: [
-      "https://picsum.photos/seed/picsum/200/300",
-      "https://picsum.photos/seed/picsum/200/300",
-      "https://picsum.photos/seed/picsum/200/300"
+      "/Foto/productFoto/productOne1.jpg",
+      "/Foto/productFoto/productOne2.jpg",
+      "/Foto/productFoto/productOne3.jpg"
     ]
   },
   {
     id: 4,
-    url: "",
+    url: "/Foto/productFoto/productOne1.jpg",
     name: "Dell4",
-    description: "lorem4",
+    description:
+      "Paket med 5 stycken Menalux 1800 dammsugarpåsar och ett filter till Electrolux, Philips, Volta och AEG. Upp till 50% längre livslängd än andra kompatibla dammsugarpåsar samt med Duraflow-teknologi som motverkar dålig lukt!",
+    discount: "",
     price: "4000",
     imgs: [
-      "https://picsum.photos/seed/picsum/200/300",
-      "https://picsum.photos/seed/picsum/200/300",
-      "https://picsum.photos/seed/picsum/200/300"
+      "/Foto/productFoto/productOne1.jpg",
+      "/Foto/productFoto/productOne2.jpg",
+      "/Foto/productFoto/productOne3.jpg"
     ]
   },
   {
     id: 5,
-    url: "",
+    url: "/Foto/productFoto/productOne1.jpg",
     name: "Dell5",
-    description: "lorem5",
+    description:
+      "Paket med 5 stycken Menalux 1800 dammsugarpåsar och ett filter till Electrolux, Philips, Volta och AEG. Upp till 50% längre livslängd än andra kompatibla dammsugarpåsar samt med Duraflow-teknologi som motverkar dålig lukt!",
+    discount: "",
     price: "5000",
     imgs: [
-      "https://picsum.photos/seed/picsum/200/300",
-      "https://picsum.photos/seed/picsum/200/300",
-      "https://picsum.photos/seed/picsum/200/300"
+      "/Foto/productFoto/productOne1.jpg",
+      "/Foto/productFoto/productOne2.jpg",
+      "/Foto/productFoto/productOne3.jpg"
     ]
   },
   {
     id: 6,
-    url: "",
+    url: "/Foto/productFoto/productOne1.jpg",
     name: "Dell6",
-    description: "lorem6",
+    description:
+      "Paket med 5 stycken Menalux 1800 dammsugarpåsar och ett filter till Electrolux, Philips, Volta och AEG. Upp till 50% längre livslängd än andra kompatibla dammsugarpåsar samt med Duraflow-teknologi som motverkar dålig lukt!",
+    discount: "50",
     price: "6000",
     imgs: [
-      "https://picsum.photos/seed/picsum/200/300",
-      "https://picsum.photos/seed/picsum/200/300",
-      "https://picsum.photos/seed/picsum/200/300"
+      "/Foto/productFoto/productOne1.jpg",
+      "/Foto/productFoto/productOne2.jpg",
+      "/Foto/productFoto/productOne3.jpg"
     ]
   },
   {
     id: 7,
-    url: "",
+    url: "/Foto/productFoto/productOne1.jpg",
     name: "Dell7",
-    description: "lorem7",
+    description:
+      "Paket med 5 stycken Menalux 1800 dammsugarpåsar och ett filter till Electrolux, Philips, Volta och AEG. Upp till 50% längre livslängd än andra kompatibla dammsugarpåsar samt med Duraflow-teknologi som motverkar dålig lukt!",
+    discount: "",
     price: "7000",
     imgs: [
-      "https://picsum.photos/seed/picsum/200/300",
-      "https://picsum.photos/seed/picsum/200/300",
-      "https://picsum.photos/seed/picsum/200/300"
+      "/Foto/productFoto/productOne1.jpg",
+      "/Foto/productFoto/productOne2.jpg",
+      "/Foto/productFoto/productOne3.jpg"
     ]
   },
   {
     id: 8,
-    url: "",
+    url: "/Foto/productFoto/productOne1.jpg",
     name: "Dell8",
-    description: "lorem8",
+    description:
+      "Paket med 5 stycken Menalux 1800 dammsugarpåsar och ett filter till Electrolux, Philips, Volta och AEG. Upp till 50% längre livslängd än andra kompatibla dammsugarpåsar samt med Duraflow-teknologi som motverkar dålig lukt!",
+    discount: "",
     price: "8000",
     imgs: [
-      "https://picsum.photos/seed/picsum/200/300",
-      "https://picsum.photos/seed/picsum/200/300",
-      "https://picsum.photos/seed/picsum/200/300"
+      "/Foto/productFoto/productOne1.jpg",
+      "/Foto/productFoto/productOne2.jpg",
+      "/Foto/productFoto/productOne3.jpg"
     ]
   },
   {
     id: 9,
-    url: "",
+    url: "/Foto/productFoto/productOne1.jpg",
     name: "Dell9",
-    description: "lorem9",
+    description:
+      "Paket med 5 stycken Menalux 1800 dammsugarpåsar och ett filter till Electrolux, Philips, Volta och AEG. Upp till 50% längre livslängd än andra kompatibla dammsugarpåsar samt med Duraflow-teknologi som motverkar dålig lukt!",
+    discount: "",
     price: "9000",
     imgs: [
-      "https://picsum.photos/seed/picsum/200/300",
-      "https://picsum.photos/seed/picsum/200/300",
-      "https://picsum.photos/seed/picsum/200/300"
+      "/Foto/productFoto/productOne1.jpg",
+      "/Foto/productFoto/productOne2.jpg",
+      "/Foto/productFoto/productOne3.jpg"
     ]
   },
   {
     id: 10,
-    url: "",
+    url: "/Foto/productFoto/productOne1.jpg",
     name: "Dell10",
-    description: "lorem10",
+    description:
+      "Paket med 5 stycken Menalux 1800 dammsugarpåsar och ett filter till Electrolux, Philips, Volta och AEG. Upp till 50% längre livslängd än andra kompatibla dammsugarpåsar samt med Duraflow-teknologi som motverkar dålig lukt!",
+    discount: "40",
     price: "10000",
     imgs: [
-      "https://picsum.photos/seed/picsum/200/300",
-      "https://picsum.photos/seed/picsum/200/300",
-      "https://picsum.photos/seed/picsum/200/300"
+      "/Foto/productFoto/productOne1.jpg",
+      "/Foto/productFoto/productOne2.jpg",
+      "/Foto/productFoto/productOne3.jpg"
     ]
   },
   {
     id: 11,
-    url: "",
+    url: "/Foto/productFoto/productOne1.jpg",
     name: "Dell11",
-    description: "lorem12",
+    description:
+      "Paket med 5 stycken Menalux 1800 dammsugarpåsar och ett filter till Electrolux, Philips, Volta och AEG. Upp till 50% längre livslängd än andra kompatibla dammsugarpåsar samt med Duraflow-teknologi som motverkar dålig lukt!",
+    discount: "60",
     price: "11000",
     imgs: [
-      "https://picsum.photos/seed/picsum/200/300",
-      "https://picsum.photos/seed/picsum/200/300",
-      "https://picsum.photos/seed/picsum/200/300"
+      "/Foto/productFoto/productOne1.jpg",
+      "/Foto/productFoto/productOne2.jpg",
+      "/Foto/productFoto/productOne3.jpg"
     ]
   },
   {
     id: 12,
-    url: "",
+    url: "/Foto/productFoto/productOne1.jpg",
     name: "Dell12",
-    description: "lorem12",
+    description:
+      "Paket med 5 stycken Menalux 1800 dammsugarpåsar och ett filter till Electrolux, Philips, Volta och AEG. Upp till 50% längre livslängd än andra kompatibla dammsugarpåsar samt med Duraflow-teknologi som motverkar dålig lukt!",
+    discount: "",
     price: "12000",
     imgs: [
-      "https://picsum.photos/seed/picsum/200/300",
-      "https://picsum.photos/seed/picsum/200/300",
-      "https://picsum.photos/seed/picsum/200/300"
+      "/Foto/productFoto/productOne1.jpg",
+      "/Foto/productFoto/productOne2.jpg",
+      "/Foto/productFoto/productOne3.jpg"
     ]
   }
 ];

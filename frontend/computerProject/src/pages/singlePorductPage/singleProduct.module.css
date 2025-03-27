@@ -1,12 +1,11 @@
 .singleMainProductWrapper{
-    background-color: yellow;
     width:100%;
-    height: 100dvh;
+    min-height: 100dvh;
     display:flex;
     justify-content: center;
+    padding:70px 20px
 }
 .singleProductWrapper{
-    background-color: rgb(255, 21, 0);
     width:100%;
     height: 100%; 
     max-width: 2000px;
@@ -17,26 +16,63 @@
 .singleProductContainer{
     width:80%;
     height:70% ;
-    background-color: blueviolet;
-    display:flex
+    display:flex;
+    gap:20px
+}
+.singleProductLeftSection{
+    width:55%;
+    height:100% ;
+    border:1px solid gray;
+    padding: 30px 20px ;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+.mainImg{
+width:100%;
+height: 200px;
+margin-bottom: 20px;
 }
 .singleProductRightSection{
     width:40%;
     height:100% ;
+    display:flex;
+    flex-direction: column;
+    gap:10px;
+    padding: 30px 10px;
 }
-.singleProductRightSection img{
-    width:100%;
-    height:60% ;
-}
+
 .singleProductImgsSection{
     display:flex;
     justify-content: center;
     align-items: center;
     gap:10px;
-    background-color: orange;
 
 }
 .singleProductImgsSection img{
     width:50px;
     height: 50px;
+    border:1px solid gainsboro;
+    cursor: pointer;
+    padding: 5px;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+.throwLineClass{
+    text-decoration: line-through;
+    color:gray
+}
+.price{
+    color:#D52627;
+    font-weight: bold;
+}
+.discount{
+        color:#D52627;
+        font-weight: bold;
+
 }
