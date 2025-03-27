@@ -12,8 +12,10 @@ export interface productsType {
   url: string;
   name: string;
   description: string;
-  price: string;
+  price: number;
   imgs?: string[];
+  discount: number;
+  finalPrice: number;
 }
 export interface filterArrType {
   label: string;
@@ -52,7 +54,7 @@ export default function Products() {
     filterSection(newVal, dropDownVal);
   }
 
-  function filterSection(searchVal: string, dropVal: string) {
+  /* function filterSection(searchVal: string, dropVal: string) {
     let filteredProduct = [...productsData];
 
     if (searchVal) {
@@ -63,16 +65,50 @@ export default function Products() {
     }
 
     if (dropVal === "Expensive") {
-      filteredProduct = [...filteredProduct].sort(
-        (a: productsType, b: productsType) => Number(b.price) - Number(a.price)
+      filteredProduct = filteredProduct.sort(
+        (a: productsType, b: productsType) =>
+          (b.finalPrice ?? 0) - (a.finalPrice ?? 0)
       );
     } else if (dropVal === "Cheap") {
-      filteredProduct = [...filteredProduct].sort(
-        (a: productsType, b: productsType) => Number(a.price) - Number(b.price)
+      filteredProduct = filteredProduct.sort(
+        (a: productsType, b: productsType) =>
+          (a.finalPrice ?? 0) - (b.finalPrice ?? 0)
       );
     }
 
     setProducts(filteredProduct);
+  } */
+  function filterSection(searchVal: string, dropVal: string) {
+    let filteredProduct = [...productsData];
+
+    if (searchVal) {
+      filteredProduct = filteredProduct.filter((item) =>
+        item.name.toLowerCase().includes(searchVal.toLowerCase())
+      );
+    }
+    if (dropVal === "Expensive") {
+      filteredProduct = [...filteredProduct].sort(
+        (a, b) => (b.finalPrice ?? 0) - (a.finalPrice ?? 0)
+      );
+    } else if (dropVal === "Cheaper") {
+      filteredProduct = [...filteredProduct].sort(
+        (a, b) => (a.finalPrice ?? 0) - (b.finalPrice ?? 0)
+      );
+    }
+
+    setProducts(filteredProduct);
+
+    /*  if (dropVal === "Expensive") {
+      filteredProduct.sort(
+        (a, b) => (Number(b.finalPrice) || 0) - (Number(a.finalPrice) || 0)
+      );
+    } else if (dropVal === "Cheaper") {
+      filteredProduct.sort(
+        (a, b) => (Number(a.finalPrice) || 0) - (Number(b.finalPrice) || 0)
+      );
+    }
+
+    setProducts(filteredProduct); */
   }
 
   return (

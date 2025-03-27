@@ -120,7 +120,6 @@ export default function SingleProductSection() {
   const { id } = useParams();
   const idParamsNumber = Number(id);
   const singleProduct = products.find((item) => item.id === idParamsNumber);
-  console.log(singleProduct);
   const [currentIndex, setCurrentIndex] = useState<number>(0);
   const discountMount =
     Number(singleProduct?.price) * (Number(singleProduct?.discount) / 100);
@@ -167,12 +166,12 @@ export default function SingleProductSection() {
               Price is:{"  "}
               <span
                 className={`${
-                  singleProduct?.discount !== "" ? styles.throwLineClass : ""
+                  singleProduct?.discount !== 0 ? styles.throwLineClass : ""
                 }`}>
                 {singleProduct?.price} $
               </span>
             </p>
-            {singleProduct?.discount !== "" ? (
+            {singleProduct?.discount !== 0 ? (
               <p>
                 {" "}
                 This product have{" "}
@@ -184,7 +183,7 @@ export default function SingleProductSection() {
             ) : (
               ""
             )}
-            {singleProduct?.discount !== "" ? (
+            {singleProduct?.discount !== 0 ? (
               <p>
                 {" "}
                 Final price is{"  "}

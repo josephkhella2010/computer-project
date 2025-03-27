@@ -48,9 +48,10 @@ export interface productsType {
     url: string;
     name: string;
     description: string; // Ensure this matches your JSON
-    price: string;
-    discount:string;
-    imgs:string[]
+    price:number ;
+    discount:number;
+    imgs:string[];
+    finalPrice:number
 }
 
 interface props {

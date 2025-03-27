@@ -94,6 +94,9 @@ cursor: pointer;
   -o-border-radius: 5px;
 }
 .productTextContent{
+    display:flex;
+    flex-direction: column;
+    gap:10px
 }
 .filterSection{
     width:100%;
@@ -158,6 +161,19 @@ outline: none;
 .dropDownMenu p:nth-of-type(1){
     border-bottom: 1px solid black;
  }
+ .throwLineClass{
+    text-decoration: line-through;
+    color:gray
+}
+.price{
+    color:#D52627;
+    font-weight: bold;
+}
+.discount{
+        color:#D52627;
+        font-weight: bold;
+
+}
 /*  */
 @media screen and (max-width: 950px) {
     .productMainContainer{
