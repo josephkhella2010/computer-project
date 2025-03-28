@@ -45,10 +45,10 @@ export default function ProductItems({ item, index }: Props) {
             ""
           )}
         </div>
-        <Link to={`/product/${id}`} state={item} className={styles.btn}>
-          <button>see all</button>
-        </Link>
       </div>
+      <Link to={`/product/${id}`} state={item} className={styles.btn}>
+        <button>see all</button>
+      </Link>
     </div>
   );
 }

@@ -127,19 +127,38 @@ export default function SingleProductSection() {
   function handleImgClick(index: number) {
     setCurrentIndex(index);
   }
+  // create unfinit slider for img
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      if (!singleProduct || !singleProduct.imgs?.length) return;
+
+      if (currentIndex < singleProduct?.imgs.length - 1) {
+        setCurrentIndex((prev) => prev + 1);
+      } else {
+        setCurrentIndex(0);
+      }
+    }, 3000);
+
+    return () => clearTimeout(timer);
+  }, [currentIndex, singleProduct?.imgs.length, singleProduct]);
 
   return (
     <div className={styles.singleMainProductWrapper}>
       <div className={styles.singleProductWrapper}>
         <div className={styles.singleProductContainer}>
           <div className={styles.singleProductLeftSection}>
-            <img
-              src={
-                singleProduct?.imgs?.[currentIndex] || singleProduct?.imgs?.[0]
-              }
-              alt={singleProduct?.name}
-              className={styles.mainImg}
-            />
+            <div className={styles.imgContainer}>
+              {singleProduct?.imgs?.map((img, index) => (
+                <img
+                  key={index}
+                  src={img}
+                  alt={`Slide ${index}`}
+                  className={`${styles.mainImg} ${
+                    index === currentIndex ? styles.animationClass : ""
+                  }`}
+                />
+              ))}
+            </div>
             <div className={styles.singleProductImgsSection}>
               {singleProduct?.imgs &&
                 Array.isArray(singleProduct.imgs) &&
