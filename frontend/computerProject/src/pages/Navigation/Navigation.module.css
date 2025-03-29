@@ -6,17 +6,25 @@
    
 }
 .navBar,.mobileNavBar{
-    width:100%;
-    max-width: 2000px;
-    height: 60px;
-         background: #D52627;
-     padding: 0px 15px;
-    display:flex;
-    justify-content: space-between;
-    align-items: center;
-    position: fixed;
-    top: 0; 
-  z-index: 1000; 
+  width:100%;
+  max-width: 2000px;
+  height: 60px;
+  background: #D52627;
+  padding: 0px 15px;
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+  /*position: fixed;
+  */top: 0;
+  z-index: 1000;
+  position:fixed;left:0px
+
+}
+.scrolled{
+    opacity: 0.85;
+}
+.stopScrolled{
+    opacity: 1;
 }
 .navBar img{
     height: 50px;
@@ -139,6 +147,7 @@ align-items: center;}
     top:0px;
     right:0px;
     background-color: #D52627;
+    opacity:1 !important
 }
 .sideMenu ul{
     height: 60%;
@@ -163,7 +172,7 @@ align-items: center;}
 }
 .backDiv{
     display:flex;
-    padding: 30px 0px;
+    padding: 30px 20px;
     align-self: center;
     font-family: 'Roboto Condensed', sans-serif !important;
     font-size: 18px;

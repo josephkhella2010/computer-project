@@ -1,11 +1,13 @@
 import React from "react";
 import styles from "../Navigation.module.css";
 import { Link } from "react-router-dom";
-
-export default function DesktopNavigation() {
+interface Props {
+  isScroll: boolean;
+}
+export default function DesktopNavigation({ isScroll }: Props) {
   return (
-    <div className={styles.MainNavBar}>
-      <div className={styles.navBar}>
+    <div className={`${styles.MainNavBar}`}>
+      <div className={`${styles.navBar} ${isScroll ? styles.scrolled : ""}`}>
         <Link to="/">
           <img src="/logo.svg" alt="not Found" />
         </Link>
