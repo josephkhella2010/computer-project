@@ -14,17 +14,16 @@
   display:flex;
   justify-content: space-between;
   align-items: center;
-  /*position: fixed;
-  */top: 0;
+  top: 0;
   z-index: 1000;
   position:fixed;left:0px
 
 }
-.scrolled{
+.mobileNavBar.scrolled {
     opacity: 0.85;
-}
-.stopScrolled{
-    opacity: 1;
+  }
+  .navBar.scrolled{
+    opacity: 0.85;
 }
 .navBar img{
     height: 50px;
@@ -137,9 +136,11 @@ align-items: center;}
     display: flex;
     justify-content: flex-end;
     z-index: 100;
+
 }
 .show{
     left:0%;
+
 }
 .sideMenu{
     height: 100%;
@@ -202,3 +203,4 @@ font-family: 30px;
     }
    
 }
+

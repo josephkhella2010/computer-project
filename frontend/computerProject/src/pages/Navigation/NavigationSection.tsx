@@ -1,12 +1,10 @@
 import React, { useEffect, useState } from "react";
 import DesktopNavigation from "./childComponent/DesktopNavigation";
 import MobileNavBar from "./childComponent/MobileNavBar";
-import styles from "./Navigation.module.css";
 
 export default function NavigationSection() {
   const [isMobile, setIsMobile] = useState<boolean>(false);
   const [isScroll, setIsScroll] = useState<boolean>(false);
-  const addScrollClass = isScroll ? styles.scrolled : "";
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > 60) {
@@ -39,7 +37,7 @@ export default function NavigationSection() {
   return (
     <div>
       {isMobile ? (
-        <MobileNavBar isScroll={isScroll} />
+        <MobileNavBar isScroll={isScroll} setIsScroll={setIsScroll} />
       ) : (
         <DesktopNavigation isScroll={isScroll} />
       )}

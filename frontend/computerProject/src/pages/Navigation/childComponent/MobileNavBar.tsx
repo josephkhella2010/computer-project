@@ -4,24 +4,25 @@ import { Link, useNavigate } from "react-router-dom";
 import { BiArrowBack } from "react-icons/bi";
 interface Props {
   isScroll: boolean;
+  setIsScroll: (isScroll: boolean) => void;
 }
-export default function MobileNavBar({ isScroll }: Props) {
+export default function MobileNavBar({ isScroll, setIsScroll }: Props) {
   const [showMenu, setShowMenu] = useState<boolean>(false);
   const addClassActive = showMenu ? styles.active : "";
   const addClassShow = showMenu ? styles.show : "";
   const navigate = useNavigate();
   useEffect(() => {
     if (showMenu) {
-      document.body.style.overflow = "hidden"; // Disable scrolling
+      document.body.style.overflow = "hidden";
+      setIsScroll(false);
     } else {
-      document.body.style.overflow = "auto"; // Enable scrolling
+      document.body.style.overflow = "auto";
     }
 
-    // Cleanup: when the component unmounts or `showMenu` changes, reset the overflow style.
     return () => {
-      document.body.style.overflow = "auto"; // Ensure scrolling is enabled when cleanup happens
+      document.body.style.overflow = "auto";
     };
-  }, [showMenu]);
+  }, [showMenu, setIsScroll]);
 
   return (
     <div className={styles.MainNavBar}>
@@ -35,12 +36,17 @@ export default function MobileNavBar({ isScroll }: Props) {
           <div className={`${styles.line} `}></div>
         </div>
         <div
-          className={`${styles.mobileOverLay} ${addClassShow} ${
-            isScroll ? styles.stopScrolled : ""
-          }`}
+          className={`${styles.mobileOverLay} ${addClassShow} `}
           onClick={() => setShowMenu(!showMenu)}>
-          <div className={styles.sideMenu} onClick={(e) => e.stopPropagation()}>
-            <div className={styles.backDiv} onClick={() => setShowMenu(false)}>
+          <div
+            onClick={(e) => e.stopPropagation()}
+            className={`${styles.sideMenu} `}>
+            <div
+              className={styles.backDiv}
+              onClick={() => {
+                setShowMenu(false);
+                setIsScroll(true);
+              }}>
               <BiArrowBack className={styles.backIcon} />
               <p>Back</p>
             </div>
