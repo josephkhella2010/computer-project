@@ -8,7 +8,7 @@ interface Props {
 }
 
 export default function ProductItems({ item, index }: Props) {
-  console.log(index);
+  //console.log(index);
   const { id, url, name, price, description, discount, finalPrice } = item;
   return (
     <div className={styles.productItemContent}>
@@ -47,7 +47,7 @@ export default function ProductItems({ item, index }: Props) {
         </div>
       </div>
       <Link to={`/product/${id}`} state={item} className={styles.btn}>
-        <button>see all</button>
+        <button>More details</button>
       </Link>
     </div>
   );

@@ -3,13 +3,11 @@
     height: 100%;
     display:flex;
     justify-content: center;
-    background-color: blueviolet;
 
 }
 .wrapper{
     width:100%;
     height: 100%;
-    background-color: green;
     display:flex;
     justify-content: center;
     max-width: 2000px;
@@ -17,25 +15,23 @@
 }
 
 .productMainContainer{
-    background-color: blue;
     width:85%;
     display:flex;
     justify-content: center;
     flex-direction: column;
-    background-color: orange;
     gap:30px;
     padding: 0 0 100px 0;
 }
 .ProductContainer{
     display: grid;
     grid-template-columns: repeat(3,1fr);
-    background-color: yellow;
     gap:20px;padding: 10px 30px;
+
 }
 
 .productItemContent{
-    background-color:rgb(161, 153, 128);
-    width:100%;
+/*     background-color:rgb(161, 153, 128);
+ */    width:100%;
     gap:20px;
     padding: 20px;
     display: flex;
@@ -50,7 +46,12 @@
     -moz-transition: transform 0.5s linear;
     -ms-transition: transform 0.5s linear;
     -o-transition: transform 0.5s linear;
-    position: relative;
+    background: rgba(234, 234, 234, 0.187);
+    backdrop-filter: blur(10px); 
+    -webkit-backdrop-filter: blur(10px); 
+    border-radius: 15px; 
+    border: 1px solid rgba(199, 164, 164, 0.3); 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 .productItemContent:hover{
     cursor: pointer;
@@ -70,6 +71,15 @@
     border-radius:10px;
 order:2;
 object-fit: fill;
+}
+.img{
+    transform: translateX(50%);
+    -webkit-transform: translateX(50%);
+    -moz-transform: translateX(50%);
+    -ms-transform: translateX(50%);
+    -o-transform: translateX(50%);
+    width:100px;
+    height: 100px;
 }
 
 .btn{
@@ -93,8 +103,12 @@ cursor: pointer;
   -moz-border-radius: 5px;
   -ms-border-radius: 5px;
   -o-border-radius: 5px;
-  
+  color:white; 
+  background-color: #c75353;
 }
+.productItemContent button:hover{
+    background-color: #D52627;
+  }
 .productTextContent{
     display:flex;
     flex-direction: column;
@@ -116,8 +130,7 @@ padding: 100px 20px 50px 20px;
     padding: 20px;
     border-radius: 20px;
     -webkit-border-radius: 20px;
-    background-color: white;
-
+    background-color:rgba(193, 193, 193, 0.203) ;
     -moz-border-radius: 20px;
     -ms-border-radius: 20px;
     -o-border-radius: 20px;
@@ -135,7 +148,7 @@ outline: none;
     width:200px;
     height: 30px;
     margin:30px;
-    background-color:white;
+    background-color:rgba(193, 193, 193, 0.203);
     border-radius: 5px;
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
@@ -153,7 +166,7 @@ outline: none;
     top:103%;
     left:0%;
     width:100%;
-    background-color: white;
+    background-color: rgba(193, 193, 193, 0.203);
     border-radius: 5px;
     padding: 10px 0px;
 }
@@ -176,6 +189,49 @@ outline: none;
         color:#D52627;
         font-weight: bold;
 
+}
+.paginationContainer{
+    display:flex;
+    gap:5px;
+    justify-content: center;
+}
+.paginationPages{
+    display:flex;
+    gap:2px;
+}
+.paginationPages button{
+   padding: 5px 10px;
+   border:none;
+cursor: pointer;
+}
+.activeBtn{
+    background-color: #c75353;
+    color:white
+}
+.disActiveBtn{
+    background-color: transparent;
+}
+.prevBtn,.nextBtn{
+      padding: 5px 8px;
+      background-color: transparent;
+      border:none;
+      cursor: pointer;
+}
+.prevBtn:hover,.nextBtn:hover{
+    border-radius: 50%;
+    background-color: #c75353;
+    color:white    
+}
+.prevBtn:disabled,
+.nextBtn:disabled {
+    pointer-events: none;
+    opacity: 0.5;
+    background-color: rgb(184, 184, 184);
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
 }
 /*  */
 @media screen and (max-width: 950px) {
@@ -208,14 +264,6 @@ outline: none;
 
 }
 
-.img{
-    transform: translateX(50%);
-    -webkit-transform: translateX(50%);
-    -moz-transform: translateX(50%);
-    -ms-transform: translateX(50%);
-    -o-transform: translateX(50%);
-    width:100px;
-    height: 100px;
-}
+
 
 
